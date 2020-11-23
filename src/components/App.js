@@ -40,7 +40,7 @@ class App extends Component {
                             <About />
                             <LocationDisplay />
                         </Route>
-                        <Route>
+                        <Route path="*">
                             <p>No match</p>
                             <LocationDisplay />
                         </Route>

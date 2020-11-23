@@ -18,8 +18,9 @@ class App extends Component {
     render() {
 
         return(
+            <Router >
             <div id="main">
-               <Router >
+               
                     <nav>
                         <div>
                             <Link to="/">Home</Link>
@@ -45,9 +46,10 @@ class App extends Component {
                             <LocationDisplay />
                         </Route>
                     </Switch>
-               </Router>
+               
                
             </div>
+            </Router>
         )
     }
 }

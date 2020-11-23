@@ -1,15 +1,16 @@
 import React, {Component, useState} from "react";
 import ReactDOM from 'react-dom';
 import '../styles/App.css';
-import Home from './home';
-import About from './about';
-import LocationDisplay from './LocationDisplay';
+// import Home from './home';
+// import About from './about';
+// import LocationDisplay from './LocationDisplay';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    Redirect
+    Redirect,
+    useLocation
   } from "react-router-dom";
 
 import {browserHistory, IndexRoute} from "react-router";
@@ -50,6 +51,33 @@ class App extends Component {
                 </Router>
             </div>
             
+        )
+    }
+}
+
+export const LocationDisplay =({ component: Component, ...rest }) => {
+    const location = useLocation();
+    return(
+        <div data-testid="location-display">
+            {location.pathname}
+        </div>
+    );
+}
+
+export class Home extends Component {
+    render() {
+
+        return(
+            <p>You are home.</p>
+        )
+    }
+}
+
+export class About extends Component {
+    render() {
+
+        return(
+            <p>You are on the about page.</p>
         )
     }
 }

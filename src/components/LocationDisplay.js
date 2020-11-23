@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/App.css';
 import { Redirect, Route, useLocation } from "react-router-dom";
 
-const LocationDisplay =({ component: Component, ...rest }) => {
+export const LocationDisplay =({ component: Component, ...rest }) => {
         const location = useLocation();
         return(
             <div data-testid="location-display">
@@ -12,4 +12,4 @@ const LocationDisplay =({ component: Component, ...rest }) => {
 }
 
 
-export default LocationDisplay;
+// export default LocationDisplay;

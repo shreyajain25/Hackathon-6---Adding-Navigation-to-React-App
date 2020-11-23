@@ -42,7 +42,7 @@ class App extends Component {
                             <LocationDisplay />
                         </Route>
                         <Route path="*">
-                            <p>No match</p>
+                            <div>No match</div>
                             <LocationDisplay />
                         </Route>
                     </Switch>

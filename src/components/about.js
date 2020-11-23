@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import '../styles/App.css';
 
-class About extends Component {
+export class About extends Component {
     render() {
 
         return(
@@ -11,4 +11,4 @@ class About extends Component {
 }
 
 
-export default About;
+// export default About;
